@@ -4,7 +4,7 @@ The first Kubernetes API Object that we will dive into is the Pod. At a high lev
 
 Recall the diagram of the of the Kubernetes Control Plane:
 
-![Control Plane](../images/k8s-cluster-1.png "Control Plane")
+![Control Plane](../pictures/k8s-cluster-1.png "Control Plane")
 
 When we submit Pod definitions to the API Server running on the Kubernetes Master, it will work with its `kubelet` agents to determine which Node to schedule the pod on, then that Node's `kubelet` agent will execute the work in its container runtime.
 
@@ -74,6 +74,9 @@ In the next section we will explore the Kubernetes resources called Services. Ev
 While this configuration is easy to deploy to Kubernetes, it is also easy to exploit. Application developers generally don't need to be security experts, but we should definitely work in tandem with them. The platform engineering group which is providing your Kubernetes cluster should provide rules and guidelines, likely including CVE scanning, non-root images, and resource limits. Don't deploy to production without someone understanding the risks.
 
 Security (and container security) is a topic in its own right, and will not be emphasized here. As you learn, keep in mind that you will have to take into account the security concerns that more knowledgable people put forth.
+
+## References
+Start [here](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/). Go back frequently.
 
 ## Exercises
 1. Create a hello world app in a language other than python and run it in kubernetes

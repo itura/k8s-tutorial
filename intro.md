@@ -43,9 +43,9 @@ Kubernetes is a tool centered around "production-grade container orchestration".
 
 Kubernetes itself takes the form of a distributed cluster responsible for running, tracking, and connecting arbitrary applications. A cluster consists of two or more hosts called Nodes. One Node in the cluster is the Kubernetes Master, which governs the scheduling of workloads, tracking of system state, and exposure of the Kubernetes API Server. The latter is used to administrate the cluster, typically via the `kubectl` command line interface. API Server endpoints allow you to schedule and manage workloads across the non-master Nodes in the cluster, as well as to inspect detailed information about each resource in the cluster.
 
-Users of the API Server submit their desired state of the cluster, causing the Kubernetes Master to determine what changes will be needed to achieve the desired state. The Kubernetes Master will communicate to `kubelet` agent processes running on non-master Nodes to determine the best way to apply the changes. `kubelet` processes control a container runtime, and are eventually responsible for running containers on the Node. This system of communication is referred to as the Control Plane.
+![Control Plane](./pictures/k8s-cluster-1.png "Control Plane")
 
-![Control Plane](./images/k8s-cluster-1.png "Control Plane")
+Users of the API Server submit their desired state of the cluster, causing the Kubernetes Master to determine what changes will be needed to achieve the desired state. The Kubernetes Master will communicate to `kubelet` agent processes running on non-master Nodes to determine the best way to apply the changes. `kubelet` processes control a container runtime, and are eventually responsible for running containers on the Node. This system of communication is referred to as the Control Plane.
 
 There's a lot to take in about what Kubernetes does and how. I think that it helps to be exposed to the concepts, then get some hands-on time working with the tool, then return to the concepts with a better understanding of what you need from Kubernetes. 
 
