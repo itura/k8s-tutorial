@@ -45,9 +45,9 @@ Kubernetes itself takes the form of a distributed cluster responsible for runnin
 
 Users of the API Server submit their desired state of the cluster, causing the Kubernetes Master to determine what changes will be needed to achieve the desired state. The Kubernetes Master will communicate to `kubelet` agent processes running on non-master Nodes to determine the best way to apply the changes. `kubelet` processes control a container runtime, and are eventually responsible for running containers on the Node. This system of communication is referred to as the Control Plane.
 
-![Control Plane](./k8s-cluster-1.png "Control Plane")
+![Control Plane](./images/k8s-cluster-1.png "Control Plane")
 
 There's a lot to take in about what Kubernetes does and how. I think that it helps to be exposed to the concepts, then get some hands-on time working with the tool, then return to the concepts with a better understanding of what you need from Kubernetes. 
 
-Working knowledge about Kubernetes revolves around interactions with the API Server. Most of the content from here will focus on describe different parts of the API and how to use them to achieve certain goals.
+Working knowledge about Kubernetes revolves around interactions with the API Server. Most of the content from here will focus on describing different parts of the API and how to use them to achieve certain goals.
 

@@ -4,10 +4,15 @@ This is an introductory tutorial to Kubernetes. It contains a trimmed-down overv
 
 ## Prerequisites
 
+Generally, it is assumed you are working on a Mac with the latest docker-desktop installed. However, as long as the `docker` and `kubectl` commands work as documented on your machine, you should be able to follow along. 
+
 - docker
 - python
 - kubernetes
   - for Mac, install docker-desktop and enable Kubernetes
-  - otherwise, install docker + minikube
-  - regardless the `kubectl` command should function as documented
+  - otherwise, install minikube
+
+## Instructions
+
+Follow the numbered directories, each representing a lesson. Each lesson contains a readme with instructions and some source code to work with. Additionally, each lesson will contain exercises which are not discussed but have proved useful in my practical experience. 
 
