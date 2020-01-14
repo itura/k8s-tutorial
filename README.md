@@ -14,5 +14,5 @@ Generally, it is assumed you are working on a Mac with the latest docker-desktop
 
 ## Instructions
 
-Follow the numbered directories, each representing a lesson. Each lesson contains a readme with instructions and some source code to work with. Additionally, each lesson will contain exercises which are not discussed but have proved useful in my practical experience. 
+Start with `intro.md`. Then, follow the numbered directories, each representing a lesson. Each lesson contains a readme with instructions and some source code to work with. Additionally, each lesson will contain exercises which are not discussed but have proved useful in my practical experience. 
 

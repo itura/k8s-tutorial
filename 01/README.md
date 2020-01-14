@@ -1,6 +1,6 @@
 # 01: Pods
 
-The first Kuberentes API Object that we will dive into is the Pod. At a high level, the Pod resource is how we request CPU and memory resources, and assign a container to run on those resources. The Pod resource forms the basis for most other types of resources you can create in Kubernetes. In reality, a single Pod can execute multiple different containers with the same resources as well as provide storage, but for introductory purposes we will assume a Pod is simply a vessel for a single container using no storage.
+The first Kubernetes API Object that we will dive into is the Pod. At a high level, the Pod resource is how we request CPU and memory resources, and assign a container to run on those resources. The Pod resource forms the basis for most other types of resources you can create in Kubernetes. In reality, a single Pod can execute multiple different containers with the same resources as well as provide storage, but for introductory purposes we will assume a Pod is simply a vessel for a single container using no storage.
 
 Recall the diagram of the of the Kubernetes Control Plane:
 
