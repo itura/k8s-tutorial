@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-world-pod
+  labels:
+    app: hello-world
+spec:
+  containers:
+  - name: hw
+    image: hw:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-world-service
+spec:
+  selector:
+    app: hello-world
+  ports:
+    - protocol: TCP
+      port: 8080
+

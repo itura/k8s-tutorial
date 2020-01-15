@@ -3,6 +3,7 @@ kind: Pod
 metadata:
   name: hello-world-pod
 spec:
+  restartPolicy: Never
   containers:
   - name: hello-world
     image: hw:latest

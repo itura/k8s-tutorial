@@ -64,11 +64,11 @@ A couple notes on the manifests:
 
 What stands out immediately is that running this code in Kubernetes is a lot harder than running it on your local machine. Granted, this code is not the type of stuff that we need "production grade container orchestration" for. However, the relative difficulty of running code in Kubernetes will be an ongoing pattern. Eventually this pattern will lead us to other tools which have been built on top of Kubernetes in order to provide saner developer workflows. 
 
-But for now, understanding the basics of how Pods are submitted to the API Server and scheduled on Nodes is a fundamental building block of our working knowledge. The Pod API used in these manifests will be leveraged as a part of larger APIs used to schedule more complicated pieces of work. Additionally, Kubernetes will run its own system Pods in order to provide the full functionality of a Kubernetes cluster. 
+But for now, understanding the basics of how Pods are submitted to the API Server and scheduled on Nodes is a fundamental building block of our working knowledge. The Pod API used in these manifests will be leveraged as a part of larger APIs used to schedule more complicated pieces of work.
 
-This is one of the confusing parts about Kubernetes. It's not just a bunch of connected hosts with container runtimes, it's that AND a small set of system processes which run on the very same infrastructure that we leverage with our manifests.
+Additionally, Kubernetes will run its own system Pods in order to provide the full functionality of a Kubernetes cluster. This is one of the confusing parts about Kubernetes: It's not just a bunch of connected hosts with container runtimes, it's that AND a small set of system processes which run on the very same infrastructure that we leverage with our manifests.
 
-In the next section we will explore the Kubernetes resources called Services. Ever wish you could access an application in your system via http://hello-world.com? Well, welcome to the future.
+In the next section we will explore some of these system processes, through which we'll discover the Kubernetes resources called Services. Ever wish you could access an application in your system via http://hello-world.com? Well, welcome to the future.
 
 ## PS: Security
 While this configuration is easy to deploy to Kubernetes, it is also easy to exploit. Application developers generally don't need to be security experts, but we should definitely work in tandem with them. The platform engineering group which is providing your Kubernetes cluster should provide rules and guidelines, likely including CVE scanning, non-root images, and resource limits. Don't deploy to production without someone understanding the risks.

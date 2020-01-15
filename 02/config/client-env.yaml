@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: client-env-pod
+spec:
+  restartPolicy: Never
+  containers:
+  - name: client
+    image: client:latest
+    command: ["python", "-m", "client"]
+
