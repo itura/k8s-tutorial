@@ -1,4 +1,4 @@
-# 02: Services
+# 02: Services and Namespaces
 
 In closing our discussion of Pods, we mentioned that Kubernetes will run some system Pods that provide functionality on top of allocating CPU and memory to containers. This functionality is networking, and is presented to the user via the Service API Object.
 
@@ -67,16 +67,26 @@ kubectl port-forward service/hello-world-service 9000:8080 # -> this command wil
 curl localhost:9000 # -> Hello World
 ```
 
-## Conclusion
-We've seen a basic Service configuration, and used it to interact with a web server. We've witnessed how the Service results in environment variables being loaded onto new Pods, and the name-based DNS record being available to all Pods.
+## Namespaces
+Kubernetes Namespaces provide "virtual clusters" to deploy resources into. Resources are only aware of other resources in their namespace, and of non-namespaced objects such as PersistentVolumes. The [official docs on Namespaces](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/) are succinct as far as k8s documentation goes, so we won't discuss them in depth. I will emphasize a few points:
 
-One part of the DNS record `my-service.default.svc.cluster.local` that we didn't dive into is the `default`, which is the Namespace that the service belongs to. So far when applying configurations, we have not specified a Namespace, and thus our resources get deployed to the `default` Namespace. In the next section, we will take the same code and deploy it using namespaces. This will illustrate the effects on the Service abstraction, and we will discuss how to use Namespaces to better organize the resources in the cluster.
+- Namespaces are intended to solve administrative problems for clusters with a large amount of resources and/or users
+- The DNS records created by Services reference the namespace of the Service. For example, if we deployed hello-world into a namespace called `hello-ns`, the Service would be addressable by `hello-world-service.hello-ns.svc.cluster.local` from any namespace
+- On the other hand, Pods created in a given namespace will not be loaded with the env variables corresponding to Services in other namespaces
+- Deleting a Namespace deletes all resources within
+
+## Conclusion
+We've seen a basic Service configuration, and used it to interact with a web server. We've witnessed how the Service results in environment variables being loaded onto new Pods, and the name-based DNS record being available to all Pods. We have discussed the impact of Namespaces on the environment variables and DNS records created by Services.
+
+This concludes our brief introduction to the basic Kubernetes API Objects. With this foundation, we can now introduce more complex API Objects. These objects, such as Deployments, StatefulSets, and PersistentVolumes will enable us to scale our applications, provide fault tolerace, and provide persistent state.
 
 ## References
 - https://kubernetes.io/docs/concepts/services-networking/service/
 
 # Exercises
+1. Create a namespace, and repeat the above examples using the `--namespace` flag
+1. Deploy hello-world and the clients into different namespaces
 1. Deploy multiple Pods with the label `app: hello-world`, and see that the Service distributes requests among the pods
-1. Deploy the client-env Pod before the hello-world pod, and see what error occurs
+1. Deploy the client-env Pod before the hello-world Service, and see what error occurs
 1. Instead of applying each manifest individually, try applying the entire config folder `kubectl apply -f config/`. Results may vary.
 

@@ -1,5 +1,3 @@
-# Introduction to Kubernetes
-
 "kubernetes" is greek for "pilot of a ship". The tool Kubernentes (or k8s) is hard to describe succinctly because of its scope and the large ecosystem surrounding the tool. I recommend reading the [official docs](https://kubernetes.io/docs/concepts/) for the authoritative description. I will attept to provide a more compact introduction more oriented towards framing the usage of the tool rather than explaining what it does in detail.
 
 ## Definitions

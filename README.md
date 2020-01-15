@@ -20,5 +20,6 @@ Start with `intro.md`. Then, follow the numbered directories, each representing 
 
 ## Recommended Reading
 
+- [Official Kubernetes Tutorials](https://kubernetes.io/docs/tutorials)
 - [Official Kubernetes Concepts](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/)
 - [Pretty good intro](https://www.bmc.com/blogs/what-is-kubernetes/)
