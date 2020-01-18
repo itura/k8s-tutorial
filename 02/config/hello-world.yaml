@@ -8,6 +8,7 @@ spec:
   containers:
   - name: hw
     image: hw:latest
+    imagePullPolicy: Never
 ---
 apiVersion: v1
 kind: Service

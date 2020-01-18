@@ -7,6 +7,7 @@ spec:
   containers:
   - name: hello-world
     image: hw:latest
+    imagePullPolicy: Never
     env:
     - name: HELLO_WHAT
       value: The Great Beyond

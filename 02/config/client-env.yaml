@@ -7,5 +7,6 @@ spec:
   containers:
   - name: client
     image: client:latest
+    imagePullPolicy: Never
     command: ["python", "-m", "client"]
 

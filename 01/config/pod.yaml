@@ -7,3 +7,4 @@ spec:
   containers:
   - name: hello-world
     image: hw:latest
+    imagePullPolicy: Never
