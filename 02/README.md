@@ -10,7 +10,7 @@ The network of each Node's container runtime is wired into this system. This all
 
 But when it comes to configuring highly connected applications, we don't want to be operating off of IP addresses. Additionally, in some use cases there are many Pods running the same application, and we want to distribute requests across those Pods.
 
-Enter the Service API Object. At a minimum, a Service definition consists of a name, a label selector, and ports. The name will be used to create an A record in the DNS Pod, which will look something like `my-service.default.svc.cluster.local`. Whenever a Pod in the cluster makes a request for that A record, the Service will distribute the request to one of the Pods with a label matching the selector.
+Enter the Service API Object. At a minimum, a Service definition consists of a name, a label selector, and ports. The name will be used to create an A record in the DNS Pod, which will look something like `my-service.default.svc.cluster.local`. Whenever a Pod in the cluster makes a request for that URL, the Service will distribute the request to one of the Pods with a label matching the selector.
 
 Additionally, once the Service exists, every container started afterwards will be given the A record and ports as environment variables named according to the name of the service.
 
