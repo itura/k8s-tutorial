@@ -23,3 +23,10 @@ Start with `intro.md`. Then, follow the numbered directories, each representing 
 - [Official Kubernetes Tutorials](https://kubernetes.io/docs/tutorials)
 - [Official Kubernetes Concepts](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/)
 - [Pretty good intro](https://www.bmc.com/blogs/what-is-kubernetes/)
+
+## TODO
+- clarify expectations on audience / prereqs
+  - add detailed setup instructions for docker/k8s
+- add intro material for docker
+- offer more context/guidelines for the exercises, esp whether they are expected to fail or succeed
+- make sure terms are defined before using them (esp manifest, load-balancing)
